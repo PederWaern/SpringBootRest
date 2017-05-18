@@ -24,6 +24,10 @@ public class ContactService {
         return contactRepository.findOne(id);
     }
 
+    public List<Contact> getContactsByFirstName(String firstName) {
+       return contactRepository.findContactsByFirstName(firstName);
+    }
+
     public void addContact (Contact contact) {
         contactRepository.save(contact);
     }
@@ -35,5 +39,7 @@ public class ContactService {
     public void updateContact (Contact contact) {
         contactRepository.save(contact);
     }
+
+
 
 }
