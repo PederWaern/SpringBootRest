@@ -38,7 +38,7 @@ public class ContactController {
         contactService.updateContact(contact);
     }
 
-    @RequestMapping(method = RequestMethod.GET, value="/contacts/searchname/{firstName}")
+    @RequestMapping(method = RequestMethod.GET, value="/contacts/name/{firstName}")
     public List<Contact> getContactsByFirstName(@PathVariable String firstName) {
         return contactService.getContactsByFirstName(firstName);
     }
